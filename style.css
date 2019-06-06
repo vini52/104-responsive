@@ -1,8 +1,8 @@
 body{
     margin: 0;
     display: grid;
-    grid-template-areas: 'navbar navbar navbar navbar' 'header header header header' 'section section aside aside' 'footer footer footer footer';
-    grid-template-rows: 10vh 20vh 50vh 20vh;
+    grid-template-areas: 'navbar navbar navbar navbar' 'header section aside div' 'footer footer footer footer';
+    grid-template-rows: 10vh 80vh 20vh;
 }
 nav{
     grid-area: navbar;
@@ -31,14 +31,18 @@ aside{
     grid-area: aside;
     background: green;
 }
+div{
+    grid-area: div;
+    background-color: brown;
+}
 footer{
     grid-area: footer;
     background-color: purple;
 }
 @media(max-width:768px){
     body{
-        grid-template-areas: 'navbar navbar navbar navbar' 'header header header header' 'section section section section' 'aside aside aside aside' 'footer footer footer footer';
-        grid-template-rows: 10vh 20vh 40vh 40vh 20vh;
+        grid-template-areas: 'navbar navbar navbar navbar' 'header header section section' 'aside aside div div' 'footer footer footer footer';
+        grid-template-rows: 10vh 80vh 80vh 20vh;
         grid-gap: 1px;
     }
     nav a{
@@ -48,9 +52,9 @@ footer{
         display: block;
     }
 }
-@media(max-width:600px){
-
-}
 @media(max-width:425px){
-
+    body{
+        grid-template-areas: 'navbar navbar navbar navbar' 'header header header header' 'section section section section' 'aside aside aside aside' 'div div div div' 'footer footer footer footer';
+        grid-template-rows: 10vh 60vh 60vh 60vh 60vh 20vh;
+    }
 }
