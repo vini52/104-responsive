@@ -2,22 +2,44 @@ body{
     margin: 0;
     display: grid;
     grid-template-areas: 'navbar navbar navbar navbar' 'header section aside div' 'footer footer footer footer';
-    grid-template-rows: 10vh 80vh 20vh;
+    grid-template-rows: 10vh 80vh 10vh;
 }
 nav{
     grid-area: navbar;
-    background-color: yellow;
+    background-color: gold;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 nav a{
     text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 18pt;
+    text-transform: uppercase;
+}
+nav a:hover{
+    color: aliceblue;
 }
 nav img{
     width: 32px;
     display: none;
     cursor: pointer;
+}
+.imagens-colunas{
+    border-radius: 100%;
+    height: 250px;
+    width: 250px;
+    box-shadow: 2px 2px 5px black;
+    max-width: 90%;
+}
+header, section, aside, div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
 }
 header{
     grid-area: header;
@@ -38,6 +60,16 @@ div{
 footer{
     grid-area: footer;
     background-color: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sociais{
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    background-color: purple;
+    flex-direction: row;
 }
 @media(max-width:768px){
     body{
